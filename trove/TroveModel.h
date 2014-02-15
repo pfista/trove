@@ -12,13 +12,14 @@
 
 @property (assign, nonatomic, readonly) NSInteger growRadius;
 
-enum troveState {
-    troveSilent,
-    troveNearby,
-    troveGrowSmall,
-    troveGrowMedium,
-    troveFound
+enum TroveState {
+    TroveSilent,
+    TroveNearby,
+    TroveGrowSmall,
+    TroveGrowMedium,
+    TroveFound
 };
+typedef enum TroveState TroveState;
 
 
 - (void) updateTroveFromBeacons:(NSArray *)beacons;

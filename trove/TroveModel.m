@@ -7,12 +7,13 @@
 //
 
 #import "TroveModel.h"
+@import CoreLocation;
 
 @interface TroveModel ()
 
 @property (assign, nonatomic, readwrite) NSInteger growRadius;
-@property (strong, nonatomic) enum troveState;
-@property (strong, nonatomic) NSMutableSet* beaconData;
+@property (assign, nonatomic) TroveState troveState;
+@property (strong, nonatomic) NSArray* beaconData;
 
 @end
 
@@ -23,23 +24,20 @@
  // Model should have a callback to view controller like update for stuff on screen (didUpdateAngel of arrow and size of circle)
 
 // Lazy instantiation
-- (NSMutableSet *)beaconData {
+- (NSArray *)beaconData {
     if (!_beaconData){
-        _beaconData = [[NSMutableSet alloc] init];
+        _beaconData = [[NSArray alloc] init];
     }
     return _beaconData;
 }
 
 - (void) updateTroveState {
-    
+    // Based on the RSSI of each beacon, determine a new dbTriplet, compare with all the existing treasure models
     
 }
 
 - (void)updateTroveFromBeacons:(NSArray *)beacons {
-    
-    // if ([self.beaconData containsObject:<#(id)#>
-    
-    
+    self.beaconData = beacons;
     [self updateTroveState];
 }
 
