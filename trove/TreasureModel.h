@@ -15,6 +15,6 @@
     // Image asset, text, video, audio, or money etc
 
 @property (strong, nonatomic) dbTriplet *position;
-@property (strong, nonatomic) NSString *textTreasure;
+@property (strong, nonatomic) UIImage *treasureImage;
 
 @end

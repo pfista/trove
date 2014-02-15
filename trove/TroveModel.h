@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "dbTriplet.h"
 
 @interface TroveModel : NSObject
-
-@property (assign, nonatomic, readonly) NSInteger growRadius;
 
 enum TroveState {
     TroveSilent,
@@ -21,8 +20,12 @@ enum TroveState {
 };
 typedef enum TroveState TroveState;
 
+@property (assign, nonatomic, readonly) NSInteger growRadius;
+@property (assign, nonatomic) TroveState troveState;
+
+
+typedef enum TroveState TroveState;
 
 - (void) updateTroveFromBeacons:(NSArray *)beacons;
 
 @end
-

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "TroveModel.h"
 @import CoreLocation;
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
