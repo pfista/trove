@@ -23,6 +23,13 @@
     self.locationManager.delegate = self;
     [self initRegion];
     
+    // Manually call this for testing purposes TODO
+    [self locationManager:self.locationManager didStartMonitoringForRegion:self.beaconRegion];
+}
+
+
+- (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
+    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
 - (void)initRegion {
@@ -48,8 +55,12 @@
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     
+    NSLog(@"Found some beacons");
     for (CLBeacon *b in beacons) {
-       
+        NSLog(b.proximityUUID.UUIDString);
+        NSLog(b.major.stringValue);
+        NSLog(b.minor.stringValue);
+        
     }
 }
 

@@ -21,6 +21,16 @@
 		B796856D18AF38A400EAE7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854F18AF38A400EAE7F8 /* UIKit.framework */; };
 		B796857518AF38A400EAE7F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B796857318AF38A400EAE7F8 /* InfoPlist.strings */; };
 		B796857718AF38A400EAE7F8 /* troveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B796857618AF38A400EAE7F8 /* troveTests.m */; };
+		B796858118AF3ED800EAE7F8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858018AF3ED800EAE7F8 /* Parse.framework */; };
+		B796858318AF3EFD00EAE7F8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858218AF3EFD00EAE7F8 /* AudioToolbox.framework */; };
+		B796858518AF3F0400EAE7F8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858418AF3F0400EAE7F8 /* CFNetwork.framework */; };
+		B796858718AF3F1100EAE7F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858618AF3F1100EAE7F8 /* CoreLocation.framework */; };
+		B796858918AF3F1800EAE7F8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858818AF3F1800EAE7F8 /* libz.dylib */; };
+		B796858B18AF3F1E00EAE7F8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858A18AF3F1E00EAE7F8 /* MobileCoreServices.framework */; };
+		B796858D18AF3F2300EAE7F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
+		B796858F18AF3F2700EAE7F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858E18AF3F2700EAE7F8 /* Security.framework */; };
+		B796859118AF3F2C00EAE7F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859018AF3F2C00EAE7F8 /* StoreKit.framework */; };
+		B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,16 @@
 		B796857218AF38A400EAE7F8 /* troveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "troveTests-Info.plist"; sourceTree = "<group>"; };
 		B796857418AF38A400EAE7F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B796857618AF38A400EAE7F8 /* troveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = troveTests.m; sourceTree = "<group>"; };
+		B796858018AF3ED800EAE7F8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B796858218AF3EFD00EAE7F8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B796858418AF3F0400EAE7F8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B796858618AF3F1100EAE7F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B796858818AF3F1800EAE7F8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B796858A18AF3F1E00EAE7F8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B796858E18AF3F2700EAE7F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B796859018AF3F2C00EAE7F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +80,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */,
+				B796859118AF3F2C00EAE7F8 /* StoreKit.framework in Frameworks */,
+				B796858F18AF3F2700EAE7F8 /* Security.framework in Frameworks */,
+				B796858D18AF3F2300EAE7F8 /* QuartzCore.framework in Frameworks */,
+				B796858B18AF3F1E00EAE7F8 /* MobileCoreServices.framework in Frameworks */,
+				B796858918AF3F1800EAE7F8 /* libz.dylib in Frameworks */,
+				B796858718AF3F1100EAE7F8 /* CoreLocation.framework in Frameworks */,
 				B796854E18AF38A400EAE7F8 /* CoreGraphics.framework in Frameworks */,
+				B796858518AF3F0400EAE7F8 /* CFNetwork.framework in Frameworks */,
+				B796858318AF3EFD00EAE7F8 /* AudioToolbox.framework in Frameworks */,
 				B796855018AF38A400EAE7F8 /* UIKit.framework in Frameworks */,
+				B796858118AF3ED800EAE7F8 /* Parse.framework in Frameworks */,
 				B796854C18AF38A400EAE7F8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +112,7 @@
 		B796853F18AF38A400EAE7F8 = {
 			isa = PBXGroup;
 			children = (
+				B796858018AF3ED800EAE7F8 /* Parse.framework */,
 				B796855118AF38A400EAE7F8 /* trove */,
 				B796857018AF38A400EAE7F8 /* troveTests */,
 				B796854A18AF38A400EAE7F8 /* Frameworks */,
@@ -101,6 +132,15 @@
 		B796854A18AF38A400EAE7F8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */,
+				B796859018AF3F2C00EAE7F8 /* StoreKit.framework */,
+				B796858E18AF3F2700EAE7F8 /* Security.framework */,
+				B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */,
+				B796858A18AF3F1E00EAE7F8 /* MobileCoreServices.framework */,
+				B796858818AF3F1800EAE7F8 /* libz.dylib */,
+				B796858618AF3F1100EAE7F8 /* CoreLocation.framework */,
+				B796858418AF3F0400EAE7F8 /* CFNetwork.framework */,
+				B796858218AF3EFD00EAE7F8 /* AudioToolbox.framework */,
 				B796854B18AF38A400EAE7F8 /* Foundation.framework */,
 				B796854D18AF38A400EAE7F8 /* CoreGraphics.framework */,
 				B796854F18AF38A400EAE7F8 /* UIKit.framework */,
@@ -199,6 +239,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Michael Pfister";
 				TargetAttributes = {
+					B796854718AF38A400EAE7F8 = {
+						DevelopmentTeam = 55SLYV6TY9;
+					};
 					B796856818AF38A400EAE7F8 = {
 						TestTargetID = B796854718AF38A400EAE7F8;
 					};
@@ -378,10 +421,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pfista/IOS\\ Development/trove",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "trove/trove-Prefix.pch";
 				INFOPLIST_FILE = "trove/trove-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +441,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/pfista/IOS\\ Development/trove",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "trove/trove-Prefix.pch";
 				INFOPLIST_FILE = "trove/trove-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
