@@ -37,6 +37,8 @@
 		B796859118AF3F2C00EAE7F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859018AF3F2C00EAE7F8 /* StoreKit.framework */; };
 		B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */; };
 		B7BF4D9318B01B250062929C /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9218B01B250062929C /* readme.md */; };
+		B7BF4D9518B023CC0062929C /* trover-big.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9418B023CC0062929C /* trover-big.png */; };
+		B7BF4D9718B029E30062929C /* add-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9618B029E30062929C /* add-placeholder.png */; };
 		B7FFE87018AFEA2800DA5EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
 		B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87118AFEB7D00DA5EB8 /* circle.png */; };
 		B7FFE88318B0108C00DA5EB8 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */; };
@@ -106,6 +108,8 @@
 		B796859018AF3F2C00EAE7F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B7BF4D9218B01B250062929C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		B7BF4D9418B023CC0062929C /* trover-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trover-big.png"; sourceTree = "<group>"; };
+		B7BF4D9618B029E30062929C /* add-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-placeholder.png"; sourceTree = "<group>"; };
 		B7FFE87118AFEB7D00DA5EB8 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		B7FFE87418B0108C00DA5EB8 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
@@ -165,6 +169,9 @@
 			children = (
 				B7FFE89318B0109100DA5EB8 /* Icons */,
 				B7FFE87118AFEB7D00DA5EB8 /* circle.png */,
+				B7BF4D9618B029E30062929C /* add-placeholder.png */,
+				B7BF4D9418B023CC0062929C /* trover-big.png */,
+				B7FFE89418B012FD00DA5EB8 /* trove-launch.png */,
 				B755DC8D18AF61D7000C73EB /* arrow.png */,
 				B755DC8E18AF61D7000C73EB /* bg.png */,
 				B755DC8F18AF61D7000C73EB /* moment.png */,
@@ -272,7 +279,6 @@
 		B7FFE89318B0109100DA5EB8 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				B7FFE89418B012FD00DA5EB8 /* trove-launch.png */,
 				B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */,
 				B7FFE87418B0108C00DA5EB8 /* AppIcon29x29@2x.png */,
 				B7FFE87518B0108C00DA5EB8 /* AppIcon40x40.png */,
@@ -379,9 +385,11 @@
 				B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */,
 				B7FFE88718B0108C00DA5EB8 /* AppIcon50x50.png in Resources */,
 				B7FFE88F18B0108C00DA5EB8 /* AppIcon76x76.png in Resources */,
+				B7BF4D9718B029E30062929C /* add-placeholder.png in Resources */,
 				B7FFE89118B0108C00DA5EB8 /* iTunesArtwork.png in Resources */,
 				B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */,
 				B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */,
+				B7BF4D9518B023CC0062929C /* trover-big.png in Resources */,
 				B796855618AF38A400EAE7F8 /* InfoPlist.strings in Resources */,
 				B7FFE88618B0108C00DA5EB8 /* AppIcon40x40@2x.png in Resources */,
 				B7FFE89218B0108C00DA5EB8 /* iTunesArtwork@2x.png in Resources */,

@@ -11,12 +11,10 @@
 /* This class contains information about a specific trove, basically a BeaconRegion. */
 @interface TroveModel ()
 
-
 @property (assign, nonatomic, readwrite) NSInteger growDiameter;
 @property (strong, nonatomic, readwrite) NSUUID *uuid;
 @property (strong, nonatomic, readwrite) NSNumber *major;
 @property (strong, nonatomic, readwrite) NSNumber *minor;
-@property (assign, nonatomic) BOOL didQueryParse;
 
 
 @end
@@ -38,10 +36,10 @@ NSString* const PLATFORM = @"iOS";
     
     // Look up info on parse and update treasure pictures arraw
 
-    if (!self.didQueryParse && self.proximity == CLProximityNear){
+    if (!self.didQueryParse && self.proximity == CLProximityImmediate){
         self.troveState = TroveViewing;
         PFQuery *query = [PFQuery queryWithClassName:@"cache"];
-        query.cachePolicy = kPFCachePolicyNetworkElseCache;
+        query.cachePolicy = kPFCachePolicyCacheElseNetwork;
         [query whereKey:@"UUID" equalTo:TROVE_UUID];
         [query whereKey:@"major" equalTo:self.major];
         [query whereKey:@"minor" equalTo:self.minor];
@@ -56,6 +54,7 @@ NSString* const PLATFORM = @"iOS";
                 for (PFObject *object in objects) {
                     NSLog(@"%@", object.objectId);
                 }
+                self.didQueryParse = YES;
             } else {
                 // Log details of the failure
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -64,7 +63,6 @@ NSString* const PLATFORM = @"iOS";
         
     }
 }
-
 
 /* Take the closest of the three beacons and set state information based on that beacon */
 - (void) updateTroveFromBeacons:(NSArray *)beacons {

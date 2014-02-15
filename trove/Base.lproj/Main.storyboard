@@ -22,13 +22,6 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlO-QW-FOO">
-                                <rect key="frame" x="20" y="521" width="280" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="26"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lxc-Gg-RlJ">
                                 <rect key="frame" x="138" y="220" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -37,14 +30,90 @@
                                 <rect key="frame" x="20" y="144" width="280" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIP-2T-EAD">
+                                <rect key="frame" x="20" y="168" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VrW-l9-pAP">
+                                <rect key="frame" x="115" y="168" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMB-Tj-o3Z">
+                                <rect key="frame" x="210" y="168" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDx-xW-MEm">
+                                <rect key="frame" x="20" y="266" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-Qv-daJ">
+                                <rect key="frame" x="115" y="266" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IeM-dO-juh">
+                                <rect key="frame" x="210" y="266" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TB9-WZ-axK">
+                                <rect key="frame" x="20" y="364" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YN0-00-cCU">
+                                <rect key="frame" x="115" y="364" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DgI-zI-5Bd">
+                                <rect key="frame" x="210" y="364" width="90" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trover-big.png" translatesAutoresizingMaskIntoConstraints="NO" id="wZd-mo-UiO">
+                                <rect key="frame" x="130" y="20" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you found a trove!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afT-qb-giG">
+                                <rect key="frame" x="20" y="78" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" red="0.7882353663444519" green="0.70196080207824707" blue="0.42352944612503052" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="select the moment you want to keep" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-tI-3Et">
+                                <rect key="frame" x="20" y="115" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJZ-XE-4Ew">
+                                <rect key="frame" x="89" y="510" width="142" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.66274511814117432" green="0.67450982332229614" blue="0.73725491762161255" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="close trove">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeTroveButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="D9I-wY-fZ4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92941182851791382" green="0.92941182851791382" blue="0.92941182851791382" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <connections>
                         <outlet property="circleImage" destination="Fbm-OA-VLf" id="CfE-2X-DH1"/>
-                        <outlet property="instructionLabel" destination="hlO-QW-FOO" id="IAa-aN-eUV"/>
+                        <outlet property="closeTroveGridButton" destination="EJZ-XE-4Ew" id="abn-0V-gQG"/>
+                        <outlet property="foundTroveLabel" destination="afT-qb-giG" id="P1I-3I-eRh"/>
+                        <outlet property="foundTroveSubLable" destination="c8B-tI-3Et" id="XsP-bc-ywX"/>
+                        <outlet property="foundTroverImage" destination="wZd-mo-UiO" id="pH3-Co-8hc"/>
                         <outlet property="sadTrover" destination="Lxc-Gg-RlJ" id="f0S-xZ-UjE"/>
                         <outlet property="statusLabel" destination="PY1-Hp-BfB" id="VRw-is-yNb"/>
+                        <outlet property="troveImage1" destination="ZIP-2T-EAD" id="Fl4-0l-irq"/>
+                        <outlet property="troveImage2" destination="VrW-l9-pAP" id="dW5-AL-h6x"/>
+                        <outlet property="troveImage3" destination="cMB-Tj-o3Z" id="xPp-9e-GMS"/>
+                        <outlet property="troveImage4" destination="BDx-xW-MEm" id="mv0-zl-kG8"/>
+                        <outlet property="troveImage5" destination="i0M-Qv-daJ" id="0ub-qh-thL"/>
+                        <outlet property="troveImage6" destination="IeM-dO-juh" id="cMa-an-cbd"/>
+                        <outlet property="troveImage7" destination="TB9-WZ-axK" id="nlc-4D-9TH"/>
+                        <outlet property="troveImage8" destination="YN0-00-cCU" id="CvK-gu-N59"/>
+                        <outlet property="troveImage9" destination="DgI-zI-5Bd" id="9jw-Gd-hVd"/>
                         <outlet property="troverImage" destination="Lxc-Gg-RlJ" id="Scc-es-jNl"/>
                     </connections>
                 </viewController>
@@ -54,6 +123,7 @@
     </scenes>
     <resources>
         <image name="circle.png" width="640" height="640"/>
+        <image name="trover-big.png" width="720" height="720"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

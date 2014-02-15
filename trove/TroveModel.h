@@ -22,11 +22,12 @@ extern NSString *const TROVE_UUID;
 extern NSString *const PLATFORM;
 
 @property (assign) CLProximity proximity;
-@property (strong, nonatomic) NSArray* treasurePictures;
+@property (strong, nonatomic) NSMutableArray* treasurePictures;
 @property (strong, nonatomic, readonly) NSUUID *uuid;
 @property (strong, nonatomic, readonly) NSNumber *major;
 @property (strong, nonatomic, readonly) NSNumber *minor;\
 @property (assign) TroveState troveState;
+@property (assign, nonatomic) BOOL didQueryParse;
 
 - (void) updateTroveFromBeacons:(NSArray *)beacons;
 
