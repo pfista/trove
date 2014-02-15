@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7231E2C18AF7E4C004F1A0B /* TreasureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7231E2B18AF7E4C004F1A0B /* TreasureModel.m */; };
+		B7231E2F18AF7FD1004F1A0B /* dbTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = B7231E2E18AF7FD1004F1A0B /* dbTriplet.m */; };
 		B755DC9218AF61D7000C73EB /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8D18AF61D7000C73EB /* arrow.png */; };
 		B755DC9318AF61D7000C73EB /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8E18AF61D7000C73EB /* bg.png */; };
 		B755DC9418AF61D7000C73EB /* moment.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8F18AF61D7000C73EB /* moment.png */; };
@@ -50,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7231E2A18AF7E4C004F1A0B /* TreasureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureModel.h; sourceTree = "<group>"; };
+		B7231E2B18AF7E4C004F1A0B /* TreasureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureModel.m; sourceTree = "<group>"; };
+		B7231E2D18AF7FD1004F1A0B /* dbTriplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbTriplet.h; sourceTree = "<group>"; };
+		B7231E2E18AF7FD1004F1A0B /* dbTriplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dbTriplet.m; sourceTree = "<group>"; };
 		B755DC8D18AF61D7000C73EB /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B755DC8E18AF61D7000C73EB /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B755DC8F18AF61D7000C73EB /* moment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moment.png; sourceTree = "<group>"; };
@@ -122,11 +128,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7231E3018AF82FF004F1A0B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B755DC8D18AF61D7000C73EB /* arrow.png */,
+				B755DC8E18AF61D7000C73EB /* bg.png */,
+				B755DC8F18AF61D7000C73EB /* moment.png */,
+				B755DC9018AF61D7000C73EB /* trover_happy.png */,
+				B755DC9118AF61D7000C73EB /* trover_sad.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		B755DC9A18AF6D31000C73EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B755DC9718AF6D29000C73EB /* TroveModel.h */,
 				B755DC9818AF6D29000C73EB /* TroveModel.m */,
+				B7231E2A18AF7E4C004F1A0B /* TreasureModel.h */,
+				B7231E2B18AF7E4C004F1A0B /* TreasureModel.m */,
+				B7231E2D18AF7FD1004F1A0B /* dbTriplet.h */,
+				B7231E2E18AF7FD1004F1A0B /* dbTriplet.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -174,11 +196,7 @@
 		B796855118AF38A400EAE7F8 /* trove */ = {
 			isa = PBXGroup;
 			children = (
-				B755DC8D18AF61D7000C73EB /* arrow.png */,
-				B755DC8E18AF61D7000C73EB /* bg.png */,
-				B755DC8F18AF61D7000C73EB /* moment.png */,
-				B755DC9018AF61D7000C73EB /* trover_happy.png */,
-				B755DC9118AF61D7000C73EB /* trover_sad.png */,
+				B7231E3018AF82FF004F1A0B /* Images */,
 				B796855A18AF38A400EAE7F8 /* AppDelegate.h */,
 				B796855B18AF38A400EAE7F8 /* AppDelegate.m */,
 				B796855D18AF38A400EAE7F8 /* Main.storyboard */,
@@ -326,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755DC9918AF6D29000C73EB /* TroveModel.m in Sources */,
+				B7231E2C18AF7E4C004F1A0B /* TreasureModel.m in Sources */,
+				B7231E2F18AF7FD1004F1A0B /* dbTriplet.m in Sources */,
 				B796856218AF38A400EAE7F8 /* ViewController.m in Sources */,
 				B796855C18AF38A400EAE7F8 /* AppDelegate.m in Sources */,
 				B796855818AF38A400EAE7F8 /* main.m in Sources */,

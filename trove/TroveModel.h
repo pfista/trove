@@ -10,6 +10,18 @@
 
 @interface TroveModel : NSObject
 
+@property (assign, nonatomic, readonly) NSInteger growRadius;
 
+enum troveState {
+    troveSilent,
+    troveNearby,
+    troveGrowSmall,
+    troveGrowMedium,
+    troveFound
+};
+
+
+- (void) updateTroveFromBeacons:(NSArray *)beacons;
 
 @end
+

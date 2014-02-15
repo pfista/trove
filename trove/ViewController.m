@@ -79,6 +79,8 @@
         Proximity
         RSSI
      */
+    
+    [self.troveModel updateTroveFromBeacons:beacons];
 
     
     int beaconsInRange = 0;
