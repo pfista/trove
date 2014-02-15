@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "TroveModel.h"
+
 @import CoreLocation;
+@import QuartzCore;
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 

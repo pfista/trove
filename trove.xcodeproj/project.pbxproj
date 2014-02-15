@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B7231E2C18AF7E4C004F1A0B /* TreasureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7231E2B18AF7E4C004F1A0B /* TreasureModel.m */; };
-		B7231E2F18AF7FD1004F1A0B /* dbTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = B7231E2E18AF7FD1004F1A0B /* dbTriplet.m */; };
 		B755DC9218AF61D7000C73EB /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8D18AF61D7000C73EB /* arrow.png */; };
 		B755DC9318AF61D7000C73EB /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8E18AF61D7000C73EB /* bg.png */; };
 		B755DC9418AF61D7000C73EB /* moment.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8F18AF61D7000C73EB /* moment.png */; };
@@ -35,10 +33,11 @@
 		B796858718AF3F1100EAE7F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858618AF3F1100EAE7F8 /* CoreLocation.framework */; };
 		B796858918AF3F1800EAE7F8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858818AF3F1800EAE7F8 /* libz.dylib */; };
 		B796858B18AF3F1E00EAE7F8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858A18AF3F1E00EAE7F8 /* MobileCoreServices.framework */; };
-		B796858D18AF3F2300EAE7F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
 		B796858F18AF3F2700EAE7F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858E18AF3F2700EAE7F8 /* Security.framework */; };
 		B796859118AF3F2C00EAE7F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859018AF3F2C00EAE7F8 /* StoreKit.framework */; };
 		B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */; };
+		B7FFE87018AFEA2800DA5EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
+		B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87118AFEB7D00DA5EB8 /* circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,10 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B7231E2A18AF7E4C004F1A0B /* TreasureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureModel.h; sourceTree = "<group>"; };
-		B7231E2B18AF7E4C004F1A0B /* TreasureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureModel.m; sourceTree = "<group>"; };
-		B7231E2D18AF7FD1004F1A0B /* dbTriplet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dbTriplet.h; sourceTree = "<group>"; };
-		B7231E2E18AF7FD1004F1A0B /* dbTriplet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dbTriplet.m; sourceTree = "<group>"; };
 		B755DC8D18AF61D7000C73EB /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B755DC8E18AF61D7000C73EB /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B755DC8F18AF61D7000C73EB /* moment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moment.png; sourceTree = "<group>"; };
@@ -92,6 +87,7 @@
 		B796858E18AF3F2700EAE7F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B796859018AF3F2C00EAE7F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B7FFE87118AFEB7D00DA5EB8 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FFE87018AFEA2800DA5EB8 /* QuartzCore.framework in Frameworks */,
 				B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */,
 				B796859118AF3F2C00EAE7F8 /* StoreKit.framework in Frameworks */,
 				B796858F18AF3F2700EAE7F8 /* Security.framework in Frameworks */,
-				B796858D18AF3F2300EAE7F8 /* QuartzCore.framework in Frameworks */,
 				B796858B18AF3F1E00EAE7F8 /* MobileCoreServices.framework in Frameworks */,
 				B796858918AF3F1800EAE7F8 /* libz.dylib in Frameworks */,
 				B796858718AF3F1100EAE7F8 /* CoreLocation.framework in Frameworks */,
@@ -131,6 +127,7 @@
 		B7231E3018AF82FF004F1A0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B7FFE87118AFEB7D00DA5EB8 /* circle.png */,
 				B755DC8D18AF61D7000C73EB /* arrow.png */,
 				B755DC8E18AF61D7000C73EB /* bg.png */,
 				B755DC8F18AF61D7000C73EB /* moment.png */,
@@ -145,10 +142,6 @@
 			children = (
 				B755DC9718AF6D29000C73EB /* TroveModel.h */,
 				B755DC9818AF6D29000C73EB /* TroveModel.m */,
-				B7231E2A18AF7E4C004F1A0B /* TreasureModel.h */,
-				B7231E2B18AF7E4C004F1A0B /* TreasureModel.m */,
-				B7231E2D18AF7FD1004F1A0B /* dbTriplet.h */,
-				B7231E2E18AF7FD1004F1A0B /* dbTriplet.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -320,6 +313,7 @@
 				B755DC9318AF61D7000C73EB /* bg.png in Resources */,
 				B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */,
 				B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */,
+				B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */,
 				B796855618AF38A400EAE7F8 /* InfoPlist.strings in Resources */,
 				B755DC9518AF61D7000C73EB /* trover_happy.png in Resources */,
 				B796855F18AF38A400EAE7F8 /* Main.storyboard in Resources */,
@@ -344,8 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755DC9918AF6D29000C73EB /* TroveModel.m in Sources */,
-				B7231E2C18AF7E4C004F1A0B /* TreasureModel.m in Sources */,
-				B7231E2F18AF7FD1004F1A0B /* dbTriplet.m in Sources */,
 				B796856218AF38A400EAE7F8 /* ViewController.m in Sources */,
 				B796855C18AF38A400EAE7F8 /* AppDelegate.m in Sources */,
 				B796855818AF38A400EAE7F8 /* main.m in Sources */,

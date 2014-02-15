@@ -17,7 +17,8 @@
 @property (assign, nonatomic) CGPoint middle;
 @property (assign, nonatomic) CGPoint searching;
 @property (strong, nonatomic) TroveModel *troveModel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *instructionLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *circleImage;
 
 @end
 
@@ -66,97 +67,85 @@
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.alertBody = @"You are near a trove! Hold your phone against it.";
+    notification.alertAction = @"Explore";
+    [[UIApplication sharedApplication] scheduleLocalNotification: notification];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
 }
 
-
 // This should send updated information to the model and let the model handle state information etc
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
-    
-    // Send info to model
-    /* 
-        Major
-        Minor
-        Proximity
-        RSSI
-     */
+
     
     [self.troveModel updateTroveFromBeacons:beacons];
-    if (self.troveModel.troveState == TroveSilent){
+    if (self.troveModel.proximity == CLProximityUnknown){
         [UIView animateWithDuration:0.3 animations: ^ {
             self.imageView.center = self.searching;
+            self.imageView.image = self.sadTrover;
+            self.circleImage.alpha = 0;
             self.imageView.alpha = 1.0;
             self.statusLabel.center = CGPointMake(self.searching.x, self.searching.y+40);
             self.statusLabel.text = @"no trove nearby";
         }];
         
     }
-    else if (self.troveModel.troveState == TroveNearby){
-        [UIView animateWithDuration:0.3 animations: ^ {
-            self.imageView.center = self.middle;
-            self.imageView.alpha = 0;
+    else if (self.troveModel.proximity == CLProximityFar){
+        
+        [UIView animateWithDuration:0.5 animations: ^ {
+            self.imageView.center = CGPointMake(self.middle.x, self.middle.y-70);
+            self.imageView.alpha = 1.0;
+            self.circleImage.alpha = 1.0;
             self.statusLabel.center = self.middle;
-            self.statusLabel.text = @"there's a trove nearby";
+            
+            self.imageView.image = [UIImage imageNamed:@"trover_happy"];
+            self.statusLabel.text = @"closer";
+            self.imageView.alpha = 0.0;
+            self.circleImage.alpha = 1.0;
+            self.circleImage.bounds = CGRectMake(self.circleImage.center.x, self.circleImage.center.y, self.troveModel.growDiameter, self.troveModel.growDiameter);
         }];
+           
+            [UIView animateWithDuration:0.3 animations: ^ {
+                self.imageView.center = self.searching;
+                self.imageView.center = CGPointMake(self.searching.x, self.searching.y+40);
+                self.statusLabel.text = @"prox far";
+            }];
+            [UIView animateWithDuration:0.18 animations: ^ {
+                self.imageView.center = CGPointMake(self.searching.x, self.searching.y-10);
+            }];
+            [UIView animateWithDuration:0.18 animations: ^ {
+                self.imageView.center = self.searching;
+            }];
+            
+
+
     }
-    else if (self.troveModel.troveState == TroveGrowSmall){
-        [UIView animateWithDuration:0.3 animations: ^ {
-            self.imageView.center = self.middle;
-            self.imageView.alpha = 0;
-            self.statusLabel.center = self.middle;
-            self.statusLabel.text = @"SML circle";
+    else if (self.troveModel.proximity == CLProximityNear){
+        [UIView animateWithDuration:1.0 animations: ^ {
+            float diameter = self.troveModel.growDiameter*2 > 280 ? 280 : self.troveModel.growDiameter*2;
+            self.imageView.image = [UIImage imageNamed:@"trover_happy"];
+            self.statusLabel.text = @"prox near";
+            self.imageView.alpha = 0.0;
+            self.circleImage.alpha = 1.0;
+            self.circleImage.bounds = CGRectMake(self.circleImage.center.x, self.circleImage.center.y, diameter, diameter);
         }];
         
     }
-    else if (self.troveModel.troveState == TroveGrowMedium){
+    else if (self.troveModel.proximity == CLProximityImmediate){
         [UIView animateWithDuration:0.3 animations: ^ {
             self.imageView.center = self.middle;
             self.imageView.alpha = 0;
-            self.statusLabel.center = self.middle;
-            self.statusLabel.text = @"MED circle";
-        }];
-        
-        
-    }
-    else if (self.troveModel.troveState == TroveFound){
-        [UIView animateWithDuration:0.3 animations: ^ {
-            self.imageView.center = self.middle;
-            self.imageView.alpha = 0;
+            self.circleImage.alpha = 0;
             self.statusLabel.center = self.middle;
             self.statusLabel.text = @"** treasure **";
         }];
         
     }
 
-    self.distanceLabel.text = [NSString stringWithFormat:@"Distance: %ld", (long)self.troveModel.growRadius];
-    /*
-    int beaconsInRange = 0;
-    NSLog(@"New Beacon info");
-    for (CLBeacon *b in beacons) {
-        if (b.proximity != CLProximityUnknown) {
-            beaconsInRange++;
-        }
-    }
-    if (beaconsInRange < 3){
-        [UIView animateWithDuration:0.3 animations: ^ {
-            self.imageView.center = self.searching;
-            self.imageView.alpha = 1.0;
-            self.statusLabel.center = CGPointMake(self.searching.x, self.searching.y+40);
-            self.statusLabel.text = @"no trove nearby";
-        }];
-    }
-    else {
-        [UIView animateWithDuration:0.3 animations: ^ {
-            self.imageView.center = self.middle;
-            self.imageView.alpha = 0;
-            self.statusLabel.center = self.middle;
-            self.statusLabel.text = @"there's a trove nearby";
-        }];
-    }
-     */
+    self.instructionLabel.text = [NSString stringWithFormat:@"M: %@ m:%@", self.troveModel.major, self.troveModel.minor];
     
     // If we have three beacons registering far
         // Say there are troves nearby

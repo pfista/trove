@@ -7,24 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "dbTriplet.h"
+#import "Parse/Parse.h"
+@import CoreLocation;
 
 @interface TroveModel : NSObject
 
-enum TroveState {
-    TroveSilent,
-    TroveNearby,
-    TroveGrowSmall,
-    TroveGrowMedium,
-    TroveFound
-};
-typedef enum TroveState TroveState;
-
-@property (assign, nonatomic, readonly) NSInteger growRadius;
-@property (assign, nonatomic) TroveState troveState;
-
-
-typedef enum TroveState TroveState;
+@property (assign) CLProximity proximity;
+@property (strong, nonatomic) NSArray* treasurePictures;
+@property (strong, nonatomic, readonly) NSUUID *uuid;
+@property (strong, nonatomic, readonly) NSNumber *major;
+@property (strong, nonatomic, readonly) NSNumber *minor;
 
 - (void) updateTroveFromBeacons:(NSArray *)beacons;
 
