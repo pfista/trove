@@ -42,10 +42,10 @@
                     </view>
                     <connections>
                         <outlet property="circleImage" destination="Fbm-OA-VLf" id="CfE-2X-DH1"/>
-                        <outlet property="imageView" destination="Lxc-Gg-RlJ" id="cTw-CI-RL5"/>
                         <outlet property="instructionLabel" destination="hlO-QW-FOO" id="IAa-aN-eUV"/>
                         <outlet property="sadTrover" destination="Lxc-Gg-RlJ" id="f0S-xZ-UjE"/>
                         <outlet property="statusLabel" destination="PY1-Hp-BfB" id="VRw-is-yNb"/>
+                        <outlet property="troverImage" destination="Lxc-Gg-RlJ" id="Scc-es-jNl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

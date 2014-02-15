@@ -11,32 +11,58 @@
 /* This class contains information about a specific trove, basically a BeaconRegion. */
 @interface TroveModel ()
 
+
 @property (assign, nonatomic, readwrite) NSInteger growDiameter;
 @property (strong, nonatomic, readwrite) NSUUID *uuid;
 @property (strong, nonatomic, readwrite) NSNumber *major;
 @property (strong, nonatomic, readwrite) NSNumber *minor;
+@property (assign, nonatomic) BOOL didQueryParse;
+
 
 @end
 
 @implementation TroveModel
 
 
+NSString* const TROVE_UUID = @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
+NSString* const PLATFORM = @"iOS";
+
+
 - (void) updateTroveState:(CLBeacon*) closest {
-    // Based on the RSSI of each beacon, determine a new dbTriplet, compare with all the existing treasure models
-    self.growDiameter = [self normalizeRSSI:closest.rssi];
     self.uuid = closest.proximityUUID;
     self.major = closest.major;
     self.minor = closest.minor;
     self.proximity = closest.proximity;
     
-
+    NSLog([NSString stringWithFormat:@"%@, %@", self.major, self.minor]);
     
     // Look up info on parse and update treasure pictures arraw
 
-    if (self.proximity == CLProximityImmediate){
-        NSLog(@"Looking up parse");
+    if (!self.didQueryParse && self.proximity == CLProximityNear){
+        self.troveState = TroveViewing;
+        PFQuery *query = [PFQuery queryWithClassName:@"cache"];
+        query.cachePolicy = kPFCachePolicyNetworkElseCache;
+        [query whereKey:@"UUID" equalTo:TROVE_UUID];
+        [query whereKey:@"major" equalTo:self.major];
+        [query whereKey:@"minor" equalTo:self.minor];
+        [query whereKey:@"platform" equalTo:PLATFORM];
+         query.limit = 9;
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                // The find succeeded.
+                NSLog(@"Successfully retrieved %lu entries in trove (%@, %@).", (unsigned long)objects.count, self.major, self.minor);
+                
+                // Do something with the found objects
+                for (PFObject *object in objects) {
+                    NSLog(@"%@", object.objectId);
+                }
+            } else {
+                // Log details of the failure
+                NSLog(@"Error: %@ %@", error, [error userInfo]);
+            }
+        }];
+        
     }
-
 }
 
 
@@ -54,21 +80,12 @@
     [self updateTroveState:closest];
 }
 
-// Map rssi from -50 (closest) to -90 (farthest) to 50-280.
-- (float)normalizeRSSI:(float) rssi {
-    NSLog([NSString stringWithFormat:@"RSSI: %f", rssi]);
-    rssi = abs(rssi);
-    rssi *= 1.5;
-   // NSLog([NSString stringWithFormat:@"RSSInom: %f", rssi]);
-    return rssi > 280 ? 280 : rssi;
-}
-
 - (BOOL)proximity:(CLProximity) prox1 closerThan:(CLProximity) prox2 {
     switch (prox1) {
         case CLProximityFar:
             switch (prox2) {
                 case CLProximityFar:
-                    return YES;
+                    return NO;
                 case CLProximityUnknown:
                     return YES;
                 case CLProximityImmediate:
@@ -81,7 +98,7 @@
                 case CLProximityFar:
                     return NO;
                 case CLProximityUnknown:
-                    return YES;
+                    return NO;
                 case CLProximityImmediate:
                     return NO;
                 case CLProximityNear:
@@ -94,7 +111,7 @@
                 case CLProximityUnknown:
                     return YES;
                 case CLProximityImmediate:
-                    return YES;
+                    return NO;
                 case CLProximityNear:
                     return YES;
             }
@@ -107,7 +124,7 @@
                 case CLProximityImmediate:
                     return NO;
                 case CLProximityNear:
-                    return YES;
+                    return NO;
             }
     }
 }

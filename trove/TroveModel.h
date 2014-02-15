@@ -12,11 +12,21 @@
 
 @interface TroveModel : NSObject
 
+enum TroveState {
+    TroveSearching,
+    TroveViewing
+};
+typedef enum TroveState TroveState;
+
+extern NSString *const TROVE_UUID;
+extern NSString *const PLATFORM;
+
 @property (assign) CLProximity proximity;
 @property (strong, nonatomic) NSArray* treasurePictures;
 @property (strong, nonatomic, readonly) NSUUID *uuid;
 @property (strong, nonatomic, readonly) NSNumber *major;
-@property (strong, nonatomic, readonly) NSNumber *minor;
+@property (strong, nonatomic, readonly) NSNumber *minor;\
+@property (assign) TroveState troveState;
 
 - (void) updateTroveFromBeacons:(NSArray *)beacons;
 

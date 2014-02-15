@@ -38,6 +38,23 @@
 		B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */; };
 		B7FFE87018AFEA2800DA5EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
 		B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87118AFEB7D00DA5EB8 /* circle.png */; };
+		B7FFE88318B0108C00DA5EB8 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */; };
+		B7FFE88418B0108C00DA5EB8 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87418B0108C00DA5EB8 /* AppIcon29x29@2x.png */; };
+		B7FFE88518B0108C00DA5EB8 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87518B0108C00DA5EB8 /* AppIcon40x40.png */; };
+		B7FFE88618B0108C00DA5EB8 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87618B0108C00DA5EB8 /* AppIcon40x40@2x.png */; };
+		B7FFE88718B0108C00DA5EB8 /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87718B0108C00DA5EB8 /* AppIcon50x50.png */; };
+		B7FFE88818B0108C00DA5EB8 /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87818B0108C00DA5EB8 /* AppIcon50x50@2x.png */; };
+		B7FFE88918B0108C00DA5EB8 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87918B0108C00DA5EB8 /* AppIcon57x57.png */; };
+		B7FFE88A18B0108C00DA5EB8 /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87A18B0108C00DA5EB8 /* AppIcon57x57@2x.png */; };
+		B7FFE88B18B0108C00DA5EB8 /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87B18B0108C00DA5EB8 /* AppIcon60x60.png */; };
+		B7FFE88C18B0108C00DA5EB8 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87C18B0108C00DA5EB8 /* AppIcon60x60@2x.png */; };
+		B7FFE88D18B0108C00DA5EB8 /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87D18B0108C00DA5EB8 /* AppIcon72x72.png */; };
+		B7FFE88E18B0108C00DA5EB8 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87E18B0108C00DA5EB8 /* AppIcon72x72@2x.png */; };
+		B7FFE88F18B0108C00DA5EB8 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87F18B0108C00DA5EB8 /* AppIcon76x76.png */; };
+		B7FFE89018B0108C00DA5EB8 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE88018B0108C00DA5EB8 /* AppIcon76x76@2x.png */; };
+		B7FFE89118B0108C00DA5EB8 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE88118B0108C00DA5EB8 /* iTunesArtwork.png */; };
+		B7FFE89218B0108C00DA5EB8 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE88218B0108C00DA5EB8 /* iTunesArtwork@2x.png */; };
+		B7FFE89518B012FD00DA5EB8 /* trove-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE89418B012FD00DA5EB8 /* trove-launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +105,23 @@
 		B796859018AF3F2C00EAE7F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B7FFE87118AFEB7D00DA5EB8 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		B7FFE87418B0108C00DA5EB8 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		B7FFE87518B0108C00DA5EB8 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		B7FFE87618B0108C00DA5EB8 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		B7FFE87718B0108C00DA5EB8 /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		B7FFE87818B0108C00DA5EB8 /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		B7FFE87918B0108C00DA5EB8 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		B7FFE87A18B0108C00DA5EB8 /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		B7FFE87B18B0108C00DA5EB8 /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		B7FFE87C18B0108C00DA5EB8 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		B7FFE87D18B0108C00DA5EB8 /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		B7FFE87E18B0108C00DA5EB8 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		B7FFE87F18B0108C00DA5EB8 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		B7FFE88018B0108C00DA5EB8 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		B7FFE88118B0108C00DA5EB8 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		B7FFE88218B0108C00DA5EB8 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		B7FFE89418B012FD00DA5EB8 /* trove-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trove-launch.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +161,7 @@
 		B7231E3018AF82FF004F1A0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B7FFE89318B0109100DA5EB8 /* Icons */,
 				B7FFE87118AFEB7D00DA5EB8 /* circle.png */,
 				B755DC8D18AF61D7000C73EB /* arrow.png */,
 				B755DC8E18AF61D7000C73EB /* bg.png */,
@@ -231,6 +266,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B7FFE89318B0109100DA5EB8 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B7FFE89418B012FD00DA5EB8 /* trove-launch.png */,
+				B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */,
+				B7FFE87418B0108C00DA5EB8 /* AppIcon29x29@2x.png */,
+				B7FFE87518B0108C00DA5EB8 /* AppIcon40x40.png */,
+				B7FFE87618B0108C00DA5EB8 /* AppIcon40x40@2x.png */,
+				B7FFE87718B0108C00DA5EB8 /* AppIcon50x50.png */,
+				B7FFE87818B0108C00DA5EB8 /* AppIcon50x50@2x.png */,
+				B7FFE87918B0108C00DA5EB8 /* AppIcon57x57.png */,
+				B7FFE87A18B0108C00DA5EB8 /* AppIcon57x57@2x.png */,
+				B7FFE87B18B0108C00DA5EB8 /* AppIcon60x60.png */,
+				B7FFE87C18B0108C00DA5EB8 /* AppIcon60x60@2x.png */,
+				B7FFE87D18B0108C00DA5EB8 /* AppIcon72x72.png */,
+				B7FFE87E18B0108C00DA5EB8 /* AppIcon72x72@2x.png */,
+				B7FFE87F18B0108C00DA5EB8 /* AppIcon76x76.png */,
+				B7FFE88018B0108C00DA5EB8 /* AppIcon76x76@2x.png */,
+				B7FFE88118B0108C00DA5EB8 /* iTunesArtwork.png */,
+				B7FFE88218B0108C00DA5EB8 /* iTunesArtwork@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,13 +370,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755DC9318AF61D7000C73EB /* bg.png in Resources */,
+				B7FFE88C18B0108C00DA5EB8 /* AppIcon60x60@2x.png in Resources */,
+				B7FFE88518B0108C00DA5EB8 /* AppIcon40x40.png in Resources */,
 				B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */,
+				B7FFE88718B0108C00DA5EB8 /* AppIcon50x50.png in Resources */,
+				B7FFE88F18B0108C00DA5EB8 /* AppIcon76x76.png in Resources */,
+				B7FFE89118B0108C00DA5EB8 /* iTunesArtwork.png in Resources */,
 				B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */,
 				B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */,
 				B796855618AF38A400EAE7F8 /* InfoPlist.strings in Resources */,
+				B7FFE88618B0108C00DA5EB8 /* AppIcon40x40@2x.png in Resources */,
+				B7FFE89218B0108C00DA5EB8 /* iTunesArtwork@2x.png in Resources */,
+				B7FFE88A18B0108C00DA5EB8 /* AppIcon57x57@2x.png in Resources */,
+				B7FFE88818B0108C00DA5EB8 /* AppIcon50x50@2x.png in Resources */,
 				B755DC9518AF61D7000C73EB /* trover_happy.png in Resources */,
+				B7FFE89518B012FD00DA5EB8 /* trove-launch.png in Resources */,
 				B796855F18AF38A400EAE7F8 /* Main.storyboard in Resources */,
+				B7FFE88318B0108C00DA5EB8 /* AppIcon29x29.png in Resources */,
+				B7FFE88E18B0108C00DA5EB8 /* AppIcon72x72@2x.png in Resources */,
+				B7FFE89018B0108C00DA5EB8 /* AppIcon76x76@2x.png in Resources */,
+				B7FFE88B18B0108C00DA5EB8 /* AppIcon60x60.png in Resources */,
+				B7FFE88D18B0108C00DA5EB8 /* AppIcon72x72.png in Resources */,
 				B755DC9218AF61D7000C73EB /* arrow.png in Resources */,
+				B7FFE88918B0108C00DA5EB8 /* AppIcon57x57.png in Resources */,
+				B7FFE88418B0108C00DA5EB8 /* AppIcon29x29@2x.png in Resources */,
 				B755DC9418AF61D7000C73EB /* moment.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
