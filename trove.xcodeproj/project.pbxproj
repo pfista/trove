@@ -36,6 +36,7 @@
 		B796858F18AF3F2700EAE7F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858E18AF3F2700EAE7F8 /* Security.framework */; };
 		B796859118AF3F2C00EAE7F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859018AF3F2C00EAE7F8 /* StoreKit.framework */; };
 		B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */; };
+		B7BF4D9318B01B250062929C /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9218B01B250062929C /* readme.md */; };
 		B7FFE87018AFEA2800DA5EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
 		B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87118AFEB7D00DA5EB8 /* circle.png */; };
 		B7FFE88318B0108C00DA5EB8 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */; };
@@ -104,6 +105,7 @@
 		B796858E18AF3F2700EAE7F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B796859018AF3F2C00EAE7F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B7BF4D9218B01B250062929C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		B7FFE87118AFEB7D00DA5EB8 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		B7FFE87318B0108C00DA5EB8 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		B7FFE87418B0108C00DA5EB8 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		B796853F18AF38A400EAE7F8 = {
 			isa = PBXGroup;
 			children = (
+				B7BF4D9218B01B250062929C /* readme.md */,
 				B796858018AF3ED800EAE7F8 /* Parse.framework */,
 				B796855118AF38A400EAE7F8 /* trove */,
 				B796857018AF38A400EAE7F8 /* troveTests */,
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755DC9318AF61D7000C73EB /* bg.png in Resources */,
+				B7BF4D9318B01B250062929C /* readme.md in Resources */,
 				B7FFE88C18B0108C00DA5EB8 /* AppIcon60x60@2x.png in Resources */,
 				B7FFE88518B0108C00DA5EB8 /* AppIcon40x40.png in Resources */,
 				B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */,
