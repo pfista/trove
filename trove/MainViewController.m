@@ -96,6 +96,14 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"editSegue"]){
+        NSLog(@" edit segue is good");
+        ImageViewController *controller = (ImageViewController *)segue.destinationViewController;
+        controller.troveModel = self.troveModel;
+    }
+}
+
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
@@ -128,6 +136,7 @@
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
 {
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    
 }
 
 // This should send updated information to the model and let the model handle state information etc
@@ -204,11 +213,12 @@
         [self initTroveViewing];
     }
     else {
-        NSLog(@"Searching.. but in viewing mode so ignore");
+       // NSLog(@"Searching.. but in viewing mode so ignore");
     }
 }
 
 - (void) initTroveViewing {
+
     NSLog(@"Init Trove Viewing");
     self.hasInitTroveViewing = YES;
     
@@ -292,8 +302,6 @@
             iv.alpha = 1.0;
             [self pushMyNewViewController];
         }];
-        
-        
     }
     
 }
@@ -304,7 +312,10 @@
     ImageViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"troveSwitchController"];
     [ivc setModalPresentationStyle:UIModalPresentationFullScreen];
     
-    [self presentViewController:ivc animated:YES completion:nil];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc]initWithIdentifier:@"editSegue" source:self destination:ivc];
+    [self prepareForSegue:segue sender:self];
+    [self performSegueWithIdentifier:@"editSegue" sender:self];
+
 }
 
 - (void)dismissImageViewController {

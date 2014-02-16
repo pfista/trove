@@ -154,6 +154,9 @@
                                 <state key="normal" title="add money">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoneyButtonAction:" destination="4IJ-yD-DeM" eventType="touchUpInside" id="c3G-xc-gJp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCC-pD-zcm">
                                 <rect key="frame" x="59" y="352" width="203" height="62"/>
@@ -164,6 +167,9 @@
                                 <state key="normal" title="add audio">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addAudioButtonAction:" destination="4IJ-yD-DeM" eventType="touchUpInside" id="OXt-fM-CrC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHe-sE-I1M">
                                 <rect key="frame" x="59" y="193" width="203" height="62"/>
@@ -174,6 +180,9 @@
                                 <state key="normal" title="add image">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImageButtonAction:" destination="4IJ-yD-DeM" eventType="touchUpInside" id="j3b-j2-MT6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOC-nV-OTg">
                                 <rect key="frame" x="59" y="272" width="203" height="62"/>
@@ -184,7 +193,14 @@
                                 <state key="normal" title="add video">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addVideoButtonAction:" destination="4IJ-yD-DeM" eventType="touchUpInside" id="zRe-CT-zXA"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-o3-Nyx">
+                                <rect key="frame" x="140" y="20" width="40" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.64928704186126074" green="0.6619719696305727" blue="0.74593431122448983" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -192,10 +208,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQE-Kj-hCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="36"/>
+            <point key="canvasLocation" x="387" y="86"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.png" width="40" height="11"/>
         <image name="circle.png" width="640" height="640"/>
         <image name="trover-big.png" width="720" height="720"/>
         <image name="trover_happy.png" width="200" height="200"/>

@@ -30,6 +30,7 @@ extern NSString *const PLATFORM;
 @property (assign) TroveState troveState;
 @property (assign, nonatomic) BOOL didQueryParse;
 
+- (void) uploadImage:(UIImage *)image;
 - (void) updateTroveFromBeacons:(NSArray *)beacons;
 
 @end

@@ -37,17 +37,17 @@ NSString* const PLATFORM = @"iOS";
     self.minor = closest.minor;
     self.proximity = closest.proximity;
     
-    NSLog([NSString stringWithFormat:@"%@, %@", self.major, self.minor]);
+    //NSLog([NSString stringWithFormat:@"%@, %@", self.major, self.minor]);
     
     // Look up info on parse and update treasure pictures arraw
 
     if (!self.didQueryParse && self.proximity == CLProximityImmediate){
-        NSLog(@"diqueryparse is false, and proximity is immediate");
+        //NSLog(@"diqueryparse is false, and proximity is immediate");
         self.didQueryParse = YES;
 
         PFQuery *query = [PFQuery queryWithClassName:@"cache"];
         [PFQuery clearAllCachedResults];
-        query.cachePolicy = kPFCachePolicyCacheElseNetwork;
+        query.cachePolicy = kPFCachePolicyNetworkOnly;
         [query whereKey:@"UUID" equalTo:TROVE_UUID];
         [query whereKey:@"major" equalTo:self.major];
         [query whereKey:@"minor" equalTo:self.minor];
@@ -101,6 +101,35 @@ NSString* const PLATFORM = @"iOS";
     }
     
     [self updateTroveState:closest];
+}
+
+-(void) uploadImage:(UIImage *)image {
+    // Parse query to upload image based on connected beacon
+    // Check state info before proceeding
+    if (!image) {
+        NSLog(@"LOST IMAGE");
+    }
+    else {
+        NSLog(@"attempting to save");
+    }
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    	
+    
+    PFObject *userPhoto = [PFObject objectWithClassName:@"cache"];
+    userPhoto[@"UUID"] = TROVE_UUID;
+    userPhoto[@"Major"] = self.major;
+    userPhoto[@"Minor"] = self.minor;
+    userPhoto[@"Platform"] = PLATFORM;
+    userPhoto[@"pictureFile"] = imageFile;
+    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error){
+             NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        else {
+            NSLog(@"Success?");
+        }
+    }];
 }
 
 - (BOOL)proximity:(CLProximity) prox1 closerThan:(CLProximity) prox2 {

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TroveModel.h"
 
 @protocol ImageViewDelegate <NSObject>
 
@@ -15,9 +16,11 @@
 
 @end
 
-@interface ImageViewController : UIViewController
+@interface ImageViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) id<ImageViewDelegate> delegate;
+/* Data model that talks to Parse */
+@property (strong, nonatomic) TroveModel *troveModel;
 
 
 /// self.delegate dismiss Imageview controller to go back on a button or something

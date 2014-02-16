@@ -25,12 +25,12 @@
 		B73BF1EF18B06D73005AE621 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DF18B06D73005AE621 /* iTunesArtwork@2x.png */; };
 		B73BF1F318B07639005AE621 /* add-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1F218B07639005AE621 /* add-placeholder.png */; };
 		B73BF1FD18B08265005AE621 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73BF1FB18B08265005AE621 /* ImageViewController.m */; };
-		B755DC9218AF61D7000C73EB /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8D18AF61D7000C73EB /* arrow.png */; };
 		B755DC9318AF61D7000C73EB /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8E18AF61D7000C73EB /* bg.png */; };
 		B755DC9418AF61D7000C73EB /* moment.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8F18AF61D7000C73EB /* moment.png */; };
 		B755DC9518AF61D7000C73EB /* trover_happy.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC9018AF61D7000C73EB /* trover_happy.png */; };
 		B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC9118AF61D7000C73EB /* trover_sad.png */; };
 		B755DC9918AF6D29000C73EB /* TroveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B755DC9818AF6D29000C73EB /* TroveModel.m */; };
+		B792728D18B09D6B0024F106 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B792728C18B09D6B0024F106 /* arrow.png */; };
 		B796854C18AF38A400EAE7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854B18AF38A400EAE7F8 /* Foundation.framework */; };
 		B796854E18AF38A400EAE7F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854D18AF38A400EAE7F8 /* CoreGraphics.framework */; };
 		B796855018AF38A400EAE7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854F18AF38A400EAE7F8 /* UIKit.framework */; };
@@ -91,13 +91,13 @@
 		B73BF1F218B07639005AE621 /* add-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-placeholder.png"; sourceTree = "<group>"; };
 		B73BF1FA18B08265005AE621 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		B73BF1FB18B08265005AE621 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
-		B755DC8D18AF61D7000C73EB /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B755DC8E18AF61D7000C73EB /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B755DC8F18AF61D7000C73EB /* moment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moment.png; sourceTree = "<group>"; };
 		B755DC9018AF61D7000C73EB /* trover_happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trover_happy.png; sourceTree = "<group>"; };
 		B755DC9118AF61D7000C73EB /* trover_sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trover_sad.png; sourceTree = "<group>"; };
 		B755DC9718AF6D29000C73EB /* TroveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TroveModel.h; sourceTree = "<group>"; };
 		B755DC9818AF6D29000C73EB /* TroveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TroveModel.m; sourceTree = "<group>"; };
+		B792728C18B09D6B0024F106 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B796854818AF38A400EAE7F8 /* trove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796854B18AF38A400EAE7F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B796854D18AF38A400EAE7F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,12 +170,12 @@
 		B7231E3018AF82FF004F1A0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B792728C18B09D6B0024F106 /* arrow.png */,
 				B7FFE89318B0109100DA5EB8 /* Icons */,
 				B7FFE87118AFEB7D00DA5EB8 /* circle.png */,
 				B7BF4D9418B023CC0062929C /* trover-big.png */,
 				B73BF1F218B07639005AE621 /* add-placeholder.png */,
 				B7FFE89418B012FD00DA5EB8 /* trove-launch.png */,
-				B755DC8D18AF61D7000C73EB /* arrow.png */,
 				B755DC8E18AF61D7000C73EB /* bg.png */,
 				B755DC8F18AF61D7000C73EB /* moment.png */,
 				B755DC9018AF61D7000C73EB /* trover_happy.png */,
@@ -384,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755DC9318AF61D7000C73EB /* bg.png in Resources */,
+				B792728D18B09D6B0024F106 /* arrow.png in Resources */,
 				B73BF1E118B06D73005AE621 /* AppIcon29x29@2x.png in Resources */,
 				B7BF4D9318B01B250062929C /* readme.md in Resources */,
 				B73BF1EC18B06D73005AE621 /* AppIcon76x76.png in Resources */,
@@ -407,7 +408,6 @@
 				B73BF1E018B06D73005AE621 /* AppIcon29x29.png in Resources */,
 				B73BF1E218B06D73005AE621 /* AppIcon40x40.png in Resources */,
 				B73BF1EB18B06D73005AE621 /* AppIcon72x72@2x.png in Resources */,
-				B755DC9218AF61D7000C73EB /* arrow.png in Resources */,
 				B73BF1E618B06D73005AE621 /* AppIcon57x57.png in Resources */,
 				B755DC9418AF61D7000C73EB /* moment.png in Resources */,
 				B73BF1E418B06D73005AE621 /* AppIcon50x50.png in Resources */,
