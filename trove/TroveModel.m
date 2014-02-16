@@ -42,9 +42,11 @@ NSString* const PLATFORM = @"iOS";
     // Look up info on parse and update treasure pictures arraw
 
     if (!self.didQueryParse && self.proximity == CLProximityImmediate){
-        PFQuery *query = [PFQuery queryWithClassName:@"cache"];
+        NSLog(@"diqueryparse is false, and proximity is immediate");
         self.didQueryParse = YES;
-        //[PFQuery clearAllCachedResults];
+
+        PFQuery *query = [PFQuery queryWithClassName:@"cache"];
+        [PFQuery clearAllCachedResults];
         query.cachePolicy = kPFCachePolicyCacheElseNetwork;
         [query whereKey:@"UUID" equalTo:TROVE_UUID];
         [query whereKey:@"major" equalTo:self.major];
@@ -53,8 +55,10 @@ NSString* const PLATFORM = @"iOS";
          query.limit = 9;
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error) {
+               
                 // The find succeeded.
                 NSLog(@"Successfully retrieved %lu entries in trove (%@, %@).", (unsigned long)objects.count, self.major, self.minor);
+                [self.treasurePictures removeAllObjects];
 
                 // Do something with the found objects
                 for (PFObject *object in objects) {
@@ -70,6 +74,7 @@ NSString* const PLATFORM = @"iOS";
                                 [self.treasurePictures addObject:image];
                                 if (self.treasurePictures.count == objects.count){
                                     self.troveState = TroveViewing;
+
                                 }
                             }
                         }
@@ -103,7 +108,7 @@ NSString* const PLATFORM = @"iOS";
         case CLProximityFar:
             switch (prox2) {
                 case CLProximityFar:
-                    return NO;
+                    return YES;
                 case CLProximityUnknown:
                     return YES;
                 case CLProximityImmediate:
@@ -116,7 +121,7 @@ NSString* const PLATFORM = @"iOS";
                 case CLProximityFar:
                     return NO;
                 case CLProximityUnknown:
-                    return NO;
+                    return YES;
                 case CLProximityImmediate:
                     return NO;
                 case CLProximityNear:
@@ -129,7 +134,7 @@ NSString* const PLATFORM = @"iOS";
                 case CLProximityUnknown:
                     return YES;
                 case CLProximityImmediate:
-                    return NO;
+                    return YES;
                 case CLProximityNear:
                     return YES;
             }
@@ -142,7 +147,7 @@ NSString* const PLATFORM = @"iOS";
                 case CLProximityImmediate:
                     return NO;
                 case CLProximityNear:
-                    return NO;
+                    return YES;
             }
     }
 }

@@ -129,7 +129,7 @@
 
     [self.troveModel updateTroveFromBeacons:beacons];
     
-    if (self.troveModel.troveState == TroveSearching) {
+    if (!self.troveModel.didQueryParse && !self.hasInitTroveViewing && self.troveModel.troveState == TroveSearching) {
         if (self.troveModel.proximity == CLProximityUnknown){
             [UIView animateWithDuration:0.5 animations: ^ {
                 // Show sad trover
@@ -154,6 +154,7 @@
                 
                 // Move the status label to the center
                 self.statusLabel.center = self.middle;
+                self.statusLabel.alpha = 1.0;
                 self.statusLabel.text = @"closer...";
 
                 // Show a smaller, transparent circle
@@ -169,6 +170,7 @@
                 self.troverImage.alpha = 0.0;
 
                 self.statusLabel.text = @"Hot!";
+                self.statusLabel.alpha = 1.0;
                 self.statusLabel.center = self.middle;
                 
                 // Show a big, opaque circle
@@ -179,7 +181,6 @@
         }
         else if (self.troveModel.proximity == CLProximityImmediate){
             [UIView animateWithDuration:0.3 animations: ^ {
-                
                 // Prepare for viewing mode
                 self.troverImage.alpha = 0;
                 
@@ -193,17 +194,18 @@
             
         }
     }
-    else if (self.troveModel.troveState == TroveViewing){
-        
-        if (!self.hasInitTroveViewing){
-            [self initTroveViewing];
-        }
-        
+    else if (!self.hasInitTroveViewing && self.troveModel.troveState == TroveViewing){
+        [self initTroveViewing];
     }
-
+    else {
+        NSLog(@"Searching.. but in viewing mode so ignore");
+    }
 }
 
 - (void) initTroveViewing {
+    NSLog(@"Init Trove Viewing");
+    self.hasInitTroveViewing = YES;
+    
     [UIView animateWithDuration:1.0 animations: ^ {
         self.foundTroverImage.alpha = 1.0;
         self.foundTroveLabel.alpha = 1.0;
@@ -234,28 +236,31 @@
             imageView.alpha = 1.0;
         }];
     }
-    self.hasInitTroveViewing = YES;
-    [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    
 }
 
 - (void) initTroveSearching {
-    [UIView animateWithDuration:1.0 animations: ^ {
-        self.foundTroverImage.alpha = 0;
-        self.foundTroveLabel.alpha = 0;
-        self.foundTroveSubLable.alpha = 0;
-        self.closeTroveGridButton.alpha = 0;
-        self.troverImage.alpha = 1;
-        self.statusLabel.alpha = 1;
-        self.circleImage.alpha = 1;
-        // Fade in all of the images
-        for (UIImageView* imageView in self.troveImages) {
-            imageView.alpha = 0;
-        }
-    }];
-    self.hasInitTroveViewing = NO;
-    self.troveModel.didQueryParse = NO;
-    [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
-    self.troveModel.troveState = TroveSearching;
+    if (self.troveModel.troveState == TroveViewing){
+        NSLog(@"Init trove searching");
+        [UIView animateWithDuration:1.0 animations: ^ {
+            self.foundTroverImage.alpha = 0;
+            self.foundTroveLabel.alpha = 0;
+            self.foundTroveSubLable.alpha = 0;
+            self.closeTroveGridButton.alpha = 0;
+            self.troverImage.alpha = 0;
+            self.statusLabel.alpha = 0;
+            self.circleImage.alpha = 0;
+            // Fade in all of the images
+            for (UIImageView* imageView in self.troveImages) {
+                imageView.alpha = 0;
+            }
+            self.troveModel.troveState = TroveSearching;
+            self.hasInitTroveViewing = NO;
+            self.troveModel.didQueryParse = NO;
+        }];
+
+
+    }
 }
 
 @end
