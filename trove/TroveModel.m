@@ -80,6 +80,10 @@ NSString* const PLATFORM = @"iOS";
                         }
                     }];
                 }
+                if (self.treasurePictures.count == 0){
+                    // No treasures were found
+                    self.troveState = TroveViewing;
+                }
             } else {
                 // Log details of the failure
                 NSLog(@"Error: %@ %@", error, [error userInfo]);
@@ -117,10 +121,11 @@ NSString* const PLATFORM = @"iOS";
     	
     
     PFObject *userPhoto = [PFObject objectWithClassName:@"cache"];
-    userPhoto[@"UUID"] = TROVE_UUID;
-    userPhoto[@"Major"] = self.major;
-    userPhoto[@"Minor"] = self.minor;
-    userPhoto[@"Platform"] = PLATFORM;
+    [userPhoto setObject:self.major forKey:@"major"];
+    [userPhoto setObject:self.minor forKey:@"minor"];
+    [userPhoto setObject:TROVE_UUID
+                  forKey:@"UUID"];
+    [userPhoto setObject:PLATFORM forKey:@"platform"];
     userPhoto[@"pictureFile"] = imageFile;
     [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error){
