@@ -16,7 +16,6 @@
 @property (strong, nonatomic, readwrite) NSNumber *major;
 @property (strong, nonatomic, readwrite) NSNumber *minor;
 
-
 @end
 
 @implementation TroveModel
@@ -25,6 +24,12 @@
 NSString* const TROVE_UUID = @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
 NSString* const PLATFORM = @"iOS";
 
+- (NSMutableArray *)treasurePictures {
+    if (!_treasurePictures){
+        _treasurePictures = [[NSMutableArray alloc] init];
+    }
+    return _treasurePictures;
+}
 
 - (void) updateTroveState:(CLBeacon*) closest {
     self.uuid = closest.proximityUUID;
@@ -37,8 +42,9 @@ NSString* const PLATFORM = @"iOS";
     // Look up info on parse and update treasure pictures arraw
 
     if (!self.didQueryParse && self.proximity == CLProximityImmediate){
-        self.troveState = TroveViewing;
         PFQuery *query = [PFQuery queryWithClassName:@"cache"];
+        self.didQueryParse = YES;
+        //[PFQuery clearAllCachedResults];
         query.cachePolicy = kPFCachePolicyCacheElseNetwork;
         [query whereKey:@"UUID" equalTo:TROVE_UUID];
         [query whereKey:@"major" equalTo:self.major];
@@ -49,12 +55,26 @@ NSString* const PLATFORM = @"iOS";
             if (!error) {
                 // The find succeeded.
                 NSLog(@"Successfully retrieved %lu entries in trove (%@, %@).", (unsigned long)objects.count, self.major, self.minor);
-                
+
                 // Do something with the found objects
                 for (PFObject *object in objects) {
-                    NSLog(@"%@", object.objectId);
+                    // Object was downloaded, we still need to get the PFFile
+                    
+                    PFFile *imageFile = [object objectForKey:@"pictureFile"];
+                    [imageFile getDataInBackgroundWithBlock:^(NSData *result, NSError *error) {
+                        if (result) {
+                            NSData* data = [[NSData alloc] initWithData:result];
+                            UIImage *image = [UIImage imageWithData:data];
+                            if (image){
+                                NSLog(@"Addig image");
+                                [self.treasurePictures addObject:image];
+                                if (self.treasurePictures.count == objects.count){
+                                    self.troveState = TroveViewing;
+                                }
+                            }
+                        }
+                    }];
                 }
-                self.didQueryParse = YES;
             } else {
                 // Log details of the failure
                 NSLog(@"Error: %@ %@", error, [error userInfo]);

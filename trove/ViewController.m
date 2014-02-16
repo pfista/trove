@@ -85,7 +85,6 @@
     [self.troveImages addObject:self.troveImage8];
     [self.troveImages addObject:self.troveImage9];
     
-    
     // Set up our model
     self.troveModel = [[TroveModel alloc] init];
     
@@ -108,7 +107,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
     if (self.hasInitTroveViewing && self.troveModel.troveState == TroveSearching){
         [self initTroveSearching];
@@ -119,14 +119,14 @@
     [[UIApplication sharedApplication] scheduleLocalNotification: notification];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
 }
 
 // This should send updated information to the model and let the model handle state information etc
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
 
-    
     [self.troveModel updateTroveFromBeacons:beacons];
     
     if (self.troveModel.troveState == TroveSearching) {
