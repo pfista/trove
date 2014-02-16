@@ -23,7 +23,6 @@
 		B73BF1ED18B06D73005AE621 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DD18B06D73005AE621 /* AppIcon76x76@2x.png */; };
 		B73BF1EE18B06D73005AE621 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DE18B06D73005AE621 /* iTunesArtwork.png */; };
 		B73BF1EF18B06D73005AE621 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DF18B06D73005AE621 /* iTunesArtwork@2x.png */; };
-		B73BF1F318B07639005AE621 /* add-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1F218B07639005AE621 /* add-placeholder.png */; };
 		B73BF1FD18B08265005AE621 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73BF1FB18B08265005AE621 /* ImageViewController.m */; };
 		B755DC9318AF61D7000C73EB /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8E18AF61D7000C73EB /* bg.png */; };
 		B755DC9418AF61D7000C73EB /* moment.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8F18AF61D7000C73EB /* moment.png */; };
@@ -31,6 +30,18 @@
 		B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC9118AF61D7000C73EB /* trover_sad.png */; };
 		B755DC9918AF6D29000C73EB /* TroveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B755DC9818AF6D29000C73EB /* TroveModel.m */; };
 		B792728D18B09D6B0024F106 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B792728C18B09D6B0024F106 /* arrow.png */; };
+		B792729818B0D0BA0024F106 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B792728E18B0D0BA0024F106 /* camera.png */; };
+		B792729918B0D0BA0024F106 /* gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = B792728F18B0D0BA0024F106 /* gallery.png */; };
+		B792729A18B0D0BA0024F106 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729018B0D0BA0024F106 /* icon1.png */; };
+		B792729B18B0D0BA0024F106 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729118B0D0BA0024F106 /* icon2.png */; };
+		B792729C18B0D0BA0024F106 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729218B0D0BA0024F106 /* icon3.png */; };
+		B792729D18B0D0BA0024F106 /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729318B0D0BA0024F106 /* icon4.png */; };
+		B792729E18B0D0BA0024F106 /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729418B0D0BA0024F106 /* icon5.png */; };
+		B792729F18B0D0BA0024F106 /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729518B0D0BA0024F106 /* icon6.png */; };
+		B79272A018B0D0BA0024F106 /* icon7.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729618B0D0BA0024F106 /* icon7.png */; };
+		B79272A118B0D0BA0024F106 /* icon8.png in Resources */ = {isa = PBXBuildFile; fileRef = B792729718B0D0BA0024F106 /* icon8.png */; };
+		B79272A418B0D8310024F106 /* SwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B79272A318B0D8310024F106 /* SwitchViewController.m */; };
+		B79272A618B0E0E80024F106 /* add-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B79272A518B0E0E80024F106 /* add-placeholder.png */; };
 		B796854C18AF38A400EAE7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854B18AF38A400EAE7F8 /* Foundation.framework */; };
 		B796854E18AF38A400EAE7F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854D18AF38A400EAE7F8 /* CoreGraphics.framework */; };
 		B796855018AF38A400EAE7F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854F18AF38A400EAE7F8 /* UIKit.framework */; };
@@ -88,7 +99,6 @@
 		B73BF1DD18B06D73005AE621 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		B73BF1DE18B06D73005AE621 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		B73BF1DF18B06D73005AE621 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		B73BF1F218B07639005AE621 /* add-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-placeholder.png"; sourceTree = "<group>"; };
 		B73BF1FA18B08265005AE621 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		B73BF1FB18B08265005AE621 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		B755DC8E18AF61D7000C73EB /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
@@ -98,6 +108,19 @@
 		B755DC9718AF6D29000C73EB /* TroveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TroveModel.h; sourceTree = "<group>"; };
 		B755DC9818AF6D29000C73EB /* TroveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TroveModel.m; sourceTree = "<group>"; };
 		B792728C18B09D6B0024F106 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		B792728E18B0D0BA0024F106 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		B792728F18B0D0BA0024F106 /* gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gallery.png; sourceTree = "<group>"; };
+		B792729018B0D0BA0024F106 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		B792729118B0D0BA0024F106 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		B792729218B0D0BA0024F106 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		B792729318B0D0BA0024F106 /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
+		B792729418B0D0BA0024F106 /* icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon5.png; sourceTree = "<group>"; };
+		B792729518B0D0BA0024F106 /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon6.png; sourceTree = "<group>"; };
+		B792729618B0D0BA0024F106 /* icon7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon7.png; sourceTree = "<group>"; };
+		B792729718B0D0BA0024F106 /* icon8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon8.png; sourceTree = "<group>"; };
+		B79272A218B0D8310024F106 /* SwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchViewController.h; sourceTree = "<group>"; };
+		B79272A318B0D8310024F106 /* SwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchViewController.m; sourceTree = "<group>"; };
+		B79272A518B0E0E80024F106 /* add-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-placeholder.png"; sourceTree = "<group>"; };
 		B796854818AF38A400EAE7F8 /* trove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796854B18AF38A400EAE7F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B796854D18AF38A400EAE7F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -170,11 +193,11 @@
 		B7231E3018AF82FF004F1A0B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B79272A518B0E0E80024F106 /* add-placeholder.png */,
 				B792728C18B09D6B0024F106 /* arrow.png */,
 				B7FFE89318B0109100DA5EB8 /* Icons */,
 				B7FFE87118AFEB7D00DA5EB8 /* circle.png */,
 				B7BF4D9418B023CC0062929C /* trover-big.png */,
-				B73BF1F218B07639005AE621 /* add-placeholder.png */,
 				B7FFE89418B012FD00DA5EB8 /* trove-launch.png */,
 				B755DC8E18AF61D7000C73EB /* bg.png */,
 				B755DC8F18AF61D7000C73EB /* moment.png */,
@@ -243,6 +266,8 @@
 				B796855D18AF38A400EAE7F8 /* Main.storyboard */,
 				B755DC9A18AF6D31000C73EB /* Model */,
 				B796856018AF38A400EAE7F8 /* MainViewController.h */,
+				B79272A218B0D8310024F106 /* SwitchViewController.h */,
+				B79272A318B0D8310024F106 /* SwitchViewController.m */,
 				B73BF1FA18B08265005AE621 /* ImageViewController.h */,
 				B73BF1FB18B08265005AE621 /* ImageViewController.m */,
 				B796856118AF38A400EAE7F8 /* MainViewController.m */,
@@ -284,6 +309,16 @@
 		B7FFE89318B0109100DA5EB8 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B792728E18B0D0BA0024F106 /* camera.png */,
+				B792728F18B0D0BA0024F106 /* gallery.png */,
+				B792729018B0D0BA0024F106 /* icon1.png */,
+				B792729118B0D0BA0024F106 /* icon2.png */,
+				B792729218B0D0BA0024F106 /* icon3.png */,
+				B792729318B0D0BA0024F106 /* icon4.png */,
+				B792729418B0D0BA0024F106 /* icon5.png */,
+				B792729518B0D0BA0024F106 /* icon6.png */,
+				B792729618B0D0BA0024F106 /* icon7.png */,
+				B792729718B0D0BA0024F106 /* icon8.png */,
 				B73BF1D018B06D73005AE621 /* AppIcon29x29.png */,
 				B73BF1D118B06D73005AE621 /* AppIcon29x29@2x.png */,
 				B73BF1D218B06D73005AE621 /* AppIcon40x40.png */,
@@ -387,12 +422,14 @@
 				B792728D18B09D6B0024F106 /* arrow.png in Resources */,
 				B73BF1E118B06D73005AE621 /* AppIcon29x29@2x.png in Resources */,
 				B7BF4D9318B01B250062929C /* readme.md in Resources */,
+				B792729818B0D0BA0024F106 /* camera.png in Resources */,
 				B73BF1EC18B06D73005AE621 /* AppIcon76x76.png in Resources */,
 				B73BF1E718B06D73005AE621 /* AppIcon57x57@2x.png in Resources */,
 				B73BF1E318B06D73005AE621 /* AppIcon40x40@2x.png in Resources */,
+				B79272A118B0D0BA0024F106 /* icon8.png in Resources */,
 				B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */,
-				B73BF1F318B07639005AE621 /* add-placeholder.png in Resources */,
 				B73BF1EA18B06D73005AE621 /* AppIcon72x72.png in Resources */,
+				B792729918B0D0BA0024F106 /* gallery.png in Resources */,
 				B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */,
 				B73BF1EE18B06D73005AE621 /* iTunesArtwork.png in Resources */,
 				B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */,
@@ -403,14 +440,22 @@
 				B73BF1E918B06D73005AE621 /* AppIcon60x60@2x.png in Resources */,
 				B755DC9518AF61D7000C73EB /* trover_happy.png in Resources */,
 				B7FFE89518B012FD00DA5EB8 /* trove-launch.png in Resources */,
+				B792729A18B0D0BA0024F106 /* icon1.png in Resources */,
 				B73BF1EF18B06D73005AE621 /* iTunesArtwork@2x.png in Resources */,
 				B796855F18AF38A400EAE7F8 /* Main.storyboard in Resources */,
 				B73BF1E018B06D73005AE621 /* AppIcon29x29.png in Resources */,
+				B792729E18B0D0BA0024F106 /* icon5.png in Resources */,
 				B73BF1E218B06D73005AE621 /* AppIcon40x40.png in Resources */,
+				B792729D18B0D0BA0024F106 /* icon4.png in Resources */,
 				B73BF1EB18B06D73005AE621 /* AppIcon72x72@2x.png in Resources */,
 				B73BF1E618B06D73005AE621 /* AppIcon57x57.png in Resources */,
+				B792729B18B0D0BA0024F106 /* icon2.png in Resources */,
+				B79272A018B0D0BA0024F106 /* icon7.png in Resources */,
 				B755DC9418AF61D7000C73EB /* moment.png in Resources */,
 				B73BF1E418B06D73005AE621 /* AppIcon50x50.png in Resources */,
+				B792729F18B0D0BA0024F106 /* icon6.png in Resources */,
+				B79272A618B0E0E80024F106 /* add-placeholder.png in Resources */,
+				B792729C18B0D0BA0024F106 /* icon3.png in Resources */,
 				B73BF1E818B06D73005AE621 /* AppIcon60x60.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +479,7 @@
 				B796856218AF38A400EAE7F8 /* MainViewController.m in Sources */,
 				B796855C18AF38A400EAE7F8 /* AppDelegate.m in Sources */,
 				B73BF1FD18B08265005AE621 /* ImageViewController.m in Sources */,
+				B79272A418B0D8310024F106 /* SwitchViewController.m in Sources */,
 				B796855818AF38A400EAE7F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

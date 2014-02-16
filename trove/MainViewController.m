@@ -35,6 +35,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *foundTroveLabel;
 @property (strong, nonatomic) IBOutlet UILabel *foundTroveSubLable;
 
+/* Placeholder icons $$$ */
+@property (strong, nonatomic) NSMutableArray *treasureIcons;
+
 @property (strong, nonatomic) IBOutlet UIButton *closeTroveGridButton;
 
 /* Data model that talks to Parse */
@@ -90,6 +93,16 @@
         imgView.layer.cornerRadius = 45.0f;
         imgView.clipsToBounds = YES;
     }
+    
+    self.treasureIcons = [[NSMutableArray alloc] init];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon1.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon2.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon3.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon4.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon5.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon6.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon7.png"]];
+    [self.treasureIcons addObject:[UIImage imageNamed:@"icon8.png"]];
     
     // Set up our model
     self.troveModel = [[TroveModel alloc] init];
@@ -231,19 +244,23 @@
         self.statusLabel.alpha = 0;
         self.circleImage.alpha = 0;
     }];
-    
+    int lowerBound = 0;
+    int upperBound = 8;
+    int rndValue = 0;
     // Load images from model
-    int i = 0;
-    for (UIImage *picture in self.troveModel.treasurePictures) {
-        [self.troveImages[i++] setImage:picture];
-        NSLog(@"Adding actual image");
+
+    for (int j = 0; j < self.troveModel.treasurePictures.count; j++){
+        rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+        [self.troveImages[j] setImage:self.treasureIcons[rndValue]];
+        [self.troveImages[j] setEnabled:YES];
     }
     
+    NSInteger count = (int)self.troveModel.treasurePictures.count;
+    
     // Set the rest of the unused imageViews with button placeholders
-    while (i < 9){
-        [self.troveImages[i++] setImage:[UIImage imageNamed:@"add-placeholder"]];
-        NSLog(@"Adding placeholder iamge");
-        // TODO: register these images for clicks
+    for (int i = (int)count; i < 9; i++ ){
+        [self.troveImages[i] setImage:[UIImage imageNamed:@"add-placeholder"]];
+        [self.troveImages[i] setEnabled:YES];
     }
     
     // Fade in all of the images
@@ -275,6 +292,9 @@
             self.troveModel.didQueryParse = NO;
         }];
 
+        for (int i = 0; i < 9; i++) {
+            [self.troveImages[i] setEnabled:NO];
+        }
 
     }
 }
@@ -300,21 +320,40 @@
         UIImageView *iv = [self.troveImages objectAtIndex: [self.troveImages indexOfObject:[touch view]]];
         [UIView animateWithDuration:.17 animations: ^ {
             iv.alpha = 1.0;
-            [self pushMyNewViewController];
+            
+            if ([self.troveImages indexOfObject:[touch view]] <= self.troveImages.count) {
+                [self pushSwitchViewController];
+            }
+            else {
+                [self pushImageViewController];
+            }
+            
         }];
     }
     
 }
-
-- (IBAction)pushMyNewViewController
+- (IBAction)pushSwitchViewController
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ImageViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"troveSwitchController"];
     [ivc setModalPresentationStyle:UIModalPresentationFullScreen];
     
-    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc]initWithIdentifier:@"editSegue" source:self destination:ivc];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc]initWithIdentifier:@"switchSegue" source:self destination:ivc];
     [self prepareForSegue:segue sender:self];
-    [self performSegueWithIdentifier:@"editSegue" sender:self];
+    [self performSegueWithIdentifier:@"switchSegue" sender:self];
+    
+}
+
+
+- (IBAction)pushImageViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ImageViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"troveImageController"];
+    [ivc setModalPresentationStyle:UIModalPresentationFullScreen];
+    
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc]initWithIdentifier:@"addSegue" source:self destination:ivc];
+    [self prepareForSegue:segue sender:self];
+    [self performSegueWithIdentifier:@"addSegue" sender:self];
 
 }
 

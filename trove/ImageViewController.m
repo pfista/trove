@@ -22,6 +22,9 @@
 - (IBAction)addImageButtonAction:(id)sender {
     [self selectPhoto:sender];
 }
+- (IBAction)addImageFromCameraAction:(id)sender {
+    [self takePhoto:sender];
+}
 - (IBAction)addVideoButtonAction:(id)sender {
     
 }
@@ -53,6 +56,7 @@
         [myAlertView show];
         
     }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +69,6 @@
 - (void)oneFingerSwipeDown:(UISwipeGestureRecognizer *)recognizer
 {
     CGPoint point = [recognizer locationInView:[self view]];
-    NSLog(@"Swipe down - start location: %f,%f", point.x, point.y);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
