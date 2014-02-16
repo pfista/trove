@@ -23,6 +23,8 @@
 		B73BF1ED18B06D73005AE621 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DD18B06D73005AE621 /* AppIcon76x76@2x.png */; };
 		B73BF1EE18B06D73005AE621 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DE18B06D73005AE621 /* iTunesArtwork.png */; };
 		B73BF1EF18B06D73005AE621 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1DF18B06D73005AE621 /* iTunesArtwork@2x.png */; };
+		B73BF1F318B07639005AE621 /* add-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B73BF1F218B07639005AE621 /* add-placeholder.png */; };
+		B73BF1FD18B08265005AE621 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B73BF1FB18B08265005AE621 /* ImageViewController.m */; };
 		B755DC9218AF61D7000C73EB /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8D18AF61D7000C73EB /* arrow.png */; };
 		B755DC9318AF61D7000C73EB /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8E18AF61D7000C73EB /* bg.png */; };
 		B755DC9418AF61D7000C73EB /* moment.png in Resources */ = {isa = PBXBuildFile; fileRef = B755DC8F18AF61D7000C73EB /* moment.png */; };
@@ -36,7 +38,7 @@
 		B796855818AF38A400EAE7F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B796855718AF38A400EAE7F8 /* main.m */; };
 		B796855C18AF38A400EAE7F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B796855B18AF38A400EAE7F8 /* AppDelegate.m */; };
 		B796855F18AF38A400EAE7F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B796855D18AF38A400EAE7F8 /* Main.storyboard */; };
-		B796856218AF38A400EAE7F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B796856118AF38A400EAE7F8 /* ViewController.m */; };
+		B796856218AF38A400EAE7F8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B796856118AF38A400EAE7F8 /* MainViewController.m */; };
 		B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B796856318AF38A400EAE7F8 /* Images.xcassets */; };
 		B796856B18AF38A400EAE7F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796856A18AF38A400EAE7F8 /* XCTest.framework */; };
 		B796856C18AF38A400EAE7F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796854B18AF38A400EAE7F8 /* Foundation.framework */; };
@@ -54,7 +56,6 @@
 		B796859318AF3F3100EAE7F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */; };
 		B7BF4D9318B01B250062929C /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9218B01B250062929C /* readme.md */; };
 		B7BF4D9518B023CC0062929C /* trover-big.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9418B023CC0062929C /* trover-big.png */; };
-		B7BF4D9718B029E30062929C /* add-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B7BF4D9618B029E30062929C /* add-placeholder.png */; };
 		B7FFE87018AFEA2800DA5EB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B796858C18AF3F2300EAE7F8 /* QuartzCore.framework */; };
 		B7FFE87218AFEB7D00DA5EB8 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE87118AFEB7D00DA5EB8 /* circle.png */; };
 		B7FFE89518B012FD00DA5EB8 /* trove-launch.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FFE89418B012FD00DA5EB8 /* trove-launch.png */; };
@@ -87,6 +88,9 @@
 		B73BF1DD18B06D73005AE621 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		B73BF1DE18B06D73005AE621 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		B73BF1DF18B06D73005AE621 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		B73BF1F218B07639005AE621 /* add-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-placeholder.png"; sourceTree = "<group>"; };
+		B73BF1FA18B08265005AE621 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		B73BF1FB18B08265005AE621 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		B755DC8D18AF61D7000C73EB /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		B755DC8E18AF61D7000C73EB /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		B755DC8F18AF61D7000C73EB /* moment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moment.png; sourceTree = "<group>"; };
@@ -105,8 +109,8 @@
 		B796855A18AF38A400EAE7F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B796855B18AF38A400EAE7F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B796855E18AF38A400EAE7F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B796856018AF38A400EAE7F8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B796856118AF38A400EAE7F8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B796856018AF38A400EAE7F8 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		B796856118AF38A400EAE7F8 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B796856318AF38A400EAE7F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B796856918AF38A400EAE7F8 /* troveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = troveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B796856A18AF38A400EAE7F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -125,7 +129,6 @@
 		B796859218AF3F3100EAE7F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B7BF4D9218B01B250062929C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		B7BF4D9418B023CC0062929C /* trover-big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trover-big.png"; sourceTree = "<group>"; };
-		B7BF4D9618B029E30062929C /* add-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-placeholder.png"; sourceTree = "<group>"; };
 		B7FFE87118AFEB7D00DA5EB8 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		B7FFE89418B012FD00DA5EB8 /* trove-launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trove-launch.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,8 +172,8 @@
 			children = (
 				B7FFE89318B0109100DA5EB8 /* Icons */,
 				B7FFE87118AFEB7D00DA5EB8 /* circle.png */,
-				B7BF4D9618B029E30062929C /* add-placeholder.png */,
 				B7BF4D9418B023CC0062929C /* trover-big.png */,
+				B73BF1F218B07639005AE621 /* add-placeholder.png */,
 				B7FFE89418B012FD00DA5EB8 /* trove-launch.png */,
 				B755DC8D18AF61D7000C73EB /* arrow.png */,
 				B755DC8E18AF61D7000C73EB /* bg.png */,
@@ -239,8 +242,10 @@
 				B796855B18AF38A400EAE7F8 /* AppDelegate.m */,
 				B796855D18AF38A400EAE7F8 /* Main.storyboard */,
 				B755DC9A18AF6D31000C73EB /* Model */,
-				B796856018AF38A400EAE7F8 /* ViewController.h */,
-				B796856118AF38A400EAE7F8 /* ViewController.m */,
+				B796856018AF38A400EAE7F8 /* MainViewController.h */,
+				B73BF1FA18B08265005AE621 /* ImageViewController.h */,
+				B73BF1FB18B08265005AE621 /* ImageViewController.m */,
+				B796856118AF38A400EAE7F8 /* MainViewController.m */,
 				B796856318AF38A400EAE7F8 /* Images.xcassets */,
 				B796855218AF38A400EAE7F8 /* Supporting Files */,
 			);
@@ -385,7 +390,7 @@
 				B73BF1E718B06D73005AE621 /* AppIcon57x57@2x.png in Resources */,
 				B73BF1E318B06D73005AE621 /* AppIcon40x40@2x.png in Resources */,
 				B796856418AF38A400EAE7F8 /* Images.xcassets in Resources */,
-				B7BF4D9718B029E30062929C /* add-placeholder.png in Resources */,
+				B73BF1F318B07639005AE621 /* add-placeholder.png in Resources */,
 				B73BF1EA18B06D73005AE621 /* AppIcon72x72.png in Resources */,
 				B755DC9618AF61D7000C73EB /* trover_sad.png in Resources */,
 				B73BF1EE18B06D73005AE621 /* iTunesArtwork.png in Resources */,
@@ -426,8 +431,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B755DC9918AF6D29000C73EB /* TroveModel.m in Sources */,
-				B796856218AF38A400EAE7F8 /* ViewController.m in Sources */,
+				B796856218AF38A400EAE7F8 /* MainViewController.m in Sources */,
 				B796855C18AF38A400EAE7F8 /* AppDelegate.m in Sources */,
+				B73BF1FD18B08265005AE621 /* ImageViewController.m in Sources */,
 				B796855818AF38A400EAE7F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

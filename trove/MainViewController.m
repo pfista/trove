@@ -6,9 +6,10 @@
 //  Copyright (c) 2014 Michael Pfister. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
+#import "ImageViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
 
 /* Assets for state TroveSearching */
 @property (weak, nonatomic) IBOutlet UIImageView *troverImage;
@@ -47,7 +48,7 @@
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
 - (IBAction)closeTroveButtonAction:(id)sender {
     [self initTroveSearching];
 }
@@ -84,6 +85,11 @@
     [self.troveImages addObject:self.troveImage7];
     [self.troveImages addObject:self.troveImage8];
     [self.troveImages addObject:self.troveImage9];
+    
+    for (UIImageView *imgView in self.troveImages) {
+        imgView.layer.cornerRadius = 45.0f;
+        imgView.clipsToBounds = YES;
+    }
     
     // Set up our model
     self.troveModel = [[TroveModel alloc] init];
@@ -261,6 +267,50 @@
 
 
     }
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    
+    if ([self.troveImages containsObject:[touch view]])
+    {
+        UIImageView *iv = [self.troveImages objectAtIndex: [self.troveImages indexOfObject:[touch view]]];
+        [UIView animateWithDuration:.17 animations: ^ {
+            iv.alpha = .25;
+        }];
+    }
+    
+}
+
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    
+    if ([self.troveImages containsObject:[touch view]])
+    {
+        UIImageView *iv = [self.troveImages objectAtIndex: [self.troveImages indexOfObject:[touch view]]];
+        [UIView animateWithDuration:.17 animations: ^ {
+            iv.alpha = 1.0;
+            [self pushMyNewViewController];
+        }];
+        
+        
+    }
+    
+}
+
+- (IBAction)pushMyNewViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ImageViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"troveSwitchController"];
+    [ivc setModalPresentationStyle:UIModalPresentationFullScreen];
+    
+    [self presentViewController:ivc animated:YES completion:nil];
+}
+
+- (void)dismissImageViewController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ImageViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"troveSwitchController"];
+    [ivc dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
