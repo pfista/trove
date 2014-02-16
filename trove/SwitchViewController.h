@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TroveModel.h"
 
-@interface SwitchViewController : UIViewController
+@protocol SwitchViewDelegate <NSObject>
+
+@required
+- (void) dismissSwitchViewController;
+
+@end
+
+@interface SwitchViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (weak, nonatomic) id<SwitchViewDelegate> delegate;
+/* Data model that talks to Parse */
+@property (strong, nonatomic) TroveModel *troveModel;
 
 @end

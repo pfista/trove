@@ -31,6 +31,7 @@ extern NSString *const PLATFORM;
 @property (assign, nonatomic) BOOL didQueryParse;
 
 - (void) uploadImage:(UIImage *)image;
+- (void) replaceImage:(UIImage *)image;
 - (void) updateTroveFromBeacons:(NSArray *)beacons;
 
 @end

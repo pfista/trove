@@ -110,11 +110,15 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"editSegue"]){
-        NSLog(@" edit segue is good");
+    if([segue.identifier isEqualToString:@"addSegue"]){
         ImageViewController *controller = (ImageViewController *)segue.destinationViewController;
         controller.troveModel = self.troveModel;
     }
+    else if([segue.identifier isEqualToString:@"switchSegue"]){
+        ImageViewController *controller = (ImageViewController *)segue.destinationViewController;
+        controller.troveModel = self.troveModel;
+    }
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
@@ -321,7 +325,10 @@
         [UIView animateWithDuration:.17 animations: ^ {
             iv.alpha = 1.0;
             
-            if ([self.troveImages indexOfObject:[touch view]] <= self.troveImages.count) {
+            NSUInteger index = [self.troveImages indexOfObjectIdenticalTo:[touch view]];
+            NSUInteger count = self.troveModel.treasurePictures.count;
+            
+            if (index < count) {
                 [self pushSwitchViewController];
             }
             else {

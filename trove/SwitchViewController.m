@@ -8,15 +8,20 @@
 
 #import "SwitchViewController.h"
 
+
 @interface SwitchViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *treasureImageView;
 
 @end
 
 @implementation SwitchViewController
-
-- (IBAction)makeTradeButtonAction:(id)sender {
-    
+- (IBAction)pickImageAction:(id)sender {
+    [self selectPhoto:sender];
 }
+- (IBAction)captureImageAction:(id)sender {
+    [self takePhoto:sender];
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,12 +36,73 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UISwipeGestureRecognizer *oneFingerSwipeDown =
+    [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwipeDown:)];
+    [oneFingerSwipeDown setDirection:UISwipeGestureRecognizerDirectionDown];
+    [[self view] addGestureRecognizer:oneFingerSwipeDown];
+}
+
+- (void)oneFingerSwipeDown:(UISwipeGestureRecognizer *)recognizer
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (IBAction)takePhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = NO;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+    
+}
+
+- (IBAction)selectPhoto:(UIButton *)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+    
+    
+}
+
+#pragma mark - Image Picker Controller delegate methods
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    if (chosenImage) {
+        NSLog(@"Image is good");
+    }
+    if (self.troveModel) {
+        // Return an image, save to camera roll.
+        [self.troveModel replaceImage:chosenImage];
+    }
+    else {
+        NSLog(@"trove nil");
+    }
+    
+    [picker dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 /*

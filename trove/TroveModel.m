@@ -137,6 +137,41 @@ NSString* const PLATFORM = @"iOS";
     }];
 }
 
+- (void) replaceImage:(UIImage *)image {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"cache"];
+    [PFQuery clearAllCachedResults];
+    query.cachePolicy = kPFCachePolicyNetworkOnly;
+    [query whereKey:@"UUID" equalTo:TROVE_UUID];
+    [query whereKey:@"major" equalTo:self.major];
+    [query whereKey:@"minor" equalTo:self.minor];
+    [query whereKey:@"platform" equalTo:PLATFORM];
+    
+    PFObject *userPhoto = [query getFirstObject];
+    PFFile* existing = [userPhoto objectForKey:@"pictureFile"];
+    [existing getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (!error) {
+            UIImage *image = [UIImage imageWithData:data];
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+            // image can now be set on a UIImageView
+        }
+    }];
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    
+    userPhoto[@"pictureFile"] = imageFile;
+    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error){
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        else {
+            NSLog(@"Success?");
+        }
+    }];
+    
+    }
+
 - (BOOL)proximity:(CLProximity) prox1 closerThan:(CLProximity) prox2 {
     switch (prox1) {
         case CLProximityFar:
